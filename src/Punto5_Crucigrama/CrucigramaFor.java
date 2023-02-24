@@ -34,6 +34,10 @@ public class CrucigramaFor {
             }
         }
         
+        for (int i = 0; i < 5; i++) {
+            almacen[i] = almacen[i].toLowerCase();
+        }
+        
         for(int i = 0; i < 5; i++){
             
             int [] ocupado = new int [almacen[i].length()];
@@ -64,9 +68,9 @@ public class CrucigramaFor {
                                 if(ocupado[k] == 0){
                                     ocupado[k] = 1;
                                     if(paso){
-                                        System.out.print("En la palabra " + almacen[i] + " encajan: ");
+                                        System.out.print("En la palabra " + almacen[i].toUpperCase().charAt(0) + almacen[i].substring(1) + " encajan: ");
                                         paso = false;
-                                    }
+                                    }   
                                     System.out.print(almacen[j] + " ");
                                     salir = true;
                                 }

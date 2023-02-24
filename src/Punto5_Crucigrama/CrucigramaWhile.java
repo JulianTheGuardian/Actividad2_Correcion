@@ -25,6 +25,7 @@ public class CrucigramaWhile {
         int w = 0;
         int e = 0;
         int r = 0;
+        int t = 0;
         
         System.out.println("Ingrese 5 palabras:");
         
@@ -41,6 +42,11 @@ public class CrucigramaWhile {
                 e++;
             }
             w++;
+        }
+        
+        while(t < 5 ){
+            almacen[t] = almacen[t].toLowerCase();
+            t++;
         }
         
         while(i < 5){
@@ -75,7 +81,7 @@ public class CrucigramaWhile {
                                 if(ocupado[k] == 0){
                                     ocupado[k] = 1;
                                     if(paso){
-                                        System.out.print("En la palabra " + almacen[i] + " encajan: ");
+                                        System.out.print("En la palabra " + almacen[i].toUpperCase().charAt(0) + almacen[i].substring(1) + " encajan: ");
                                         paso = false;
                                     }
                                     System.out.print(almacen[j] + " ");

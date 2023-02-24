@@ -21,6 +21,7 @@ public class CrucugramaDoWhile {
         int c = 0;
         int v = 0;
         int b = 0;
+        int n = 0;
         int i = 0;
         int j = 0;
         int k = 0;
@@ -39,9 +40,14 @@ public class CrucugramaDoWhile {
                     v--;
                 }
                 v++;
-            }while(v<5);
+            }while(v < 5);
             c++;
-        }while(c<5);
+        }while(c < 5);
+        
+        do{
+            almacen[n] = almacen[n].toLowerCase();
+            n++;
+        }while(n < 5);
         
         do{
             
@@ -75,7 +81,7 @@ public class CrucugramaDoWhile {
                                 if(ocupado[k] == 0){
                                     ocupado[k] = 1;
                                     if(paso){
-                                        System.out.print("En la palabra " + almacen[i] + " encajan: ");
+                                        System.out.print("En la palabra " + almacen[i].toUpperCase().charAt(0) + almacen[i].substring(1) + " encajan: ");
                                         paso = false;
                                     }
                                     System.out.print(almacen[j] + " ");
@@ -92,12 +98,12 @@ public class CrucugramaDoWhile {
                 k = 0;
                 
                 j++;
-            }while(j <5);
+            }while(j < 5);
             j = 0;
             
             System.out.println("");
             paso = true;
             i++;
-        }while(i<5);
+        }while(i < 5);
     }
 }
